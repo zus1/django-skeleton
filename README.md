@@ -20,4 +20,6 @@ Run ``make build`` to build a project for the first time (uncomment collectstati
 
 Run ``make up`` to start containers (by default they won't run in detached mode. Add -d in MakeFile up command, if you wish them to).
 
+Copy .env.dist to .env file ``cp .env.dist .env``
+
 That is it, enjoy building your new application.
