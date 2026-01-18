@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'django_celery_beat',
     'django_redis',
     'django_celery_results',
-    'drf_spectacular'
+    'drf_spectacular',
+    'django_filters',
 ]
 
 REST_FRAMEWORK = {
@@ -222,10 +223,10 @@ CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
 
 CELERY_BEAT_SCHEDULE = {
-    'example_scheduled_task': {
-        #'task': 'module.tasks.shared_task_callback',
-        #'schedule': crontab()
-    }
+    # 'example_scheduled_task': {
+    #     'task': 'module.tasks.shared_task_callback',
+    #     'schedule': crontab()
+    # }
 }
 
 AWS_ACCESS_KEY = os.environ.get('AWS_ACCESS_KEY')

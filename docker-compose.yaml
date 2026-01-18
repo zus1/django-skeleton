@@ -20,12 +20,12 @@ services:
       context: .
       dockerfile: .docker/Dockerfile
     command: >
-      sh -c "venv/bin/celery -A skeleton worker --loglevel=info"
+      sh -c "./venv/bin/celery -A skeleton worker --loglevel=info"
     env_file:
       - .env
     volumes:
       - .:/home/appuser/app
-      - /home/appuser/app/venv
+      - django-skeleton-venv:/home/appuser/app/venv
     depends_on:
       - web
       - redis
@@ -39,7 +39,7 @@ services:
       - .env
     volumes:
       - .:/home/appuser/app
-      - /home/appuser/app/venv
+      - django-skeleton-venv:/home/appuser/app/venv
     depends_on:
       - web
       - redis

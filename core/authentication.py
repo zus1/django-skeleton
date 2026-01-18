@@ -21,4 +21,4 @@ class ApiAuthentication(BaseAuthentication):
         except (NotFound, ValidationError) as e:
             raise exceptions.AuthenticationFailed(detail=str(e))
 
-        return (token.user, token)
+        return token.user, token

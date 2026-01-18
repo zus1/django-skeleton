@@ -16,7 +16,7 @@ USER appuser
 WORKDIR /home/appuser/app
 
 # Create venv and install Python packages inside it
-RUN python3 -m venv .venv
+RUN python3 -m venv venv
 
 # Copy requirements first for caching
 COPY --chown=appuser:appuser requirements.txt ./
